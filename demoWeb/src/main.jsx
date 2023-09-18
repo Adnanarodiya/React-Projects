@@ -5,6 +5,7 @@ import Layout from "./Layout";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
+import MyPrams from "./components/MyPrams/MyPrams";
 import {
   Route,
   RouterProvider,
@@ -17,7 +18,8 @@ const router = createBrowserRouter(
     <Route path="/" element={<Layout />}>
       <Route path="" element={<Home />} />,
       <Route path="about" element={<About />} />,
-      <Route path="contact" element={<Contact />} />
+      <Route path="contact" element={<Contact />} />,
+      <Route path="MyPrams/:id" element={<MyPrams />} />,
     </Route>
   )
 );
