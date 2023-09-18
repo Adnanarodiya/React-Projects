@@ -1,15 +1,15 @@
-import { useEffect, useState } from "react";
-
+import { useLoaderData } from "react-router-dom";
 const Github = () => {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    fetch("https://api.github.com/users/Adnanarodiya")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setData(data);
-      });
-  }, []);
+  const data = useLoaderData();
+  //   const [data, setData] = useState([]);
+  //   useEffect(() => {
+  //     fetch("https://api.github.com/users/Adnanarodiya")
+  //       .then((res) => res.json())
+  //       .then((data) => {
+  //         console.log(data);
+  //         setData(data);
+  //       });
+  //   }, []);
   return (
     <>
       <div className="bg-gray-600 text-white italic p-4 text-center text-3xl">
@@ -32,3 +32,8 @@ const Github = () => {
 };
 
 export default Github;
+
+export const githubInfoLoader = async () => {
+  const res = await fetch("https://api.github.com/users/Adnanarodiya");
+  return res.json();
+};
