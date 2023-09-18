@@ -6,7 +6,7 @@ import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 import MyPrams from "./components/MyPrams/MyPrams";
-import Github, { githubInfoLoader } from "./components/Github/Github";
+import Github from "./components/Github/Github";
 import {
   Route,
   RouterProvider,
@@ -31,3 +31,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <RouterProvider router={router} />
   </React.StrictMode>
 );
+
+async function githubInfoLoader() {
+  const res = await fetch("https://api.github.com/users/Adnanarodiya");
+  return res.json();
+}
