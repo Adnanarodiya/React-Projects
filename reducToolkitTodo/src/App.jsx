@@ -1,9 +1,15 @@
 import "./App.css";
+import AddTodo from "./components/AddTodo";
+import Todos from "./components/Todos";
 
 function App() {
   return (
     <>
-      <h1 className="bg-blue-400 text-center p-4">Adnan</h1>
+      <h1 className="text-white italic font-semibold text-4xl">
+        Redux Toolkit Todo
+      </h1>
+      <AddTodo />
+      <Todos />
     </>
   );
 }
