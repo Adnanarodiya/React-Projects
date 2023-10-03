@@ -13,6 +13,7 @@ module.exports = {
   plugins: ["react-refresh"],
   rules: {
     "no-useless-catch": "off",
+    "no-unreachable": "off",
     "react-refresh/only-export-components": [
       "warn",
       { allowConstantExport: true },
