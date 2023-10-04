@@ -12,6 +12,8 @@ module.exports = {
   settings: { react: { version: "18.2" } },
   plugins: ["react-refresh"],
   rules: {
+    "react-refresh/only-export-components": "off",
+    "react/prop-types": "off",
     "no-useless-catch": "off",
     "no-unreachable": "off",
     "react-refresh/only-export-components": [
