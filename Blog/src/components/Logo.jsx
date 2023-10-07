@@ -3,7 +3,7 @@ const Logo = ({ width = "100px" }) => {
     <div>
       {/* <img src="logo.png" alt="" /> */}
       <h3 className="text-white font-extrabold italic text-2xl">
-        Adnan's Blog
+        Adnan&apos;s Blog
       </h3>
     </div>
   );
